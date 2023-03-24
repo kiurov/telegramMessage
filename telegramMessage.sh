@@ -16,6 +16,6 @@ curl -s -X POST https://api.telegram.org/bot${apiToken}/sendMessage -d chat_id=$
 # cat $message > /tmp/exportToBot && curl --socks5-basic -s -X POST https://api.telegram.org/bot${apiToken}/sendDocument -F chat_id=${chatId} -F document=@/tmp/exportToBot
 
 # Clean Up
-rm -f /tmp/exportToBot
+# rm -f /tmp/exportToBot
 
 exit 0
