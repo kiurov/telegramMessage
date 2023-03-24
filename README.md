@@ -1,54 +1,25 @@
 # TelegramMessage
 
-Создаем своего telegram-бота, дальше отправляем в API Telegram текстовые сообщений или файлы, и автоматом получаем их в виде сообщений от нашего бота. Также можно создать необходимые нам группы/чаты куда мы этого бота можем добавить.
+Create a telegram bot, then send text messages or files to the Telegram API, and automatically receive them as messages from our bot. You can also create necessary groups/chats where we can add this bot.
 
-1 Пишем боту @BotFather и через него создаем своего нового бота. Там же можно настроить его имя, установить ему аватарку, и т.д. Еще важно узнать ТОКЕН нашего бота, записываем.
+1. Write to the bot @BotFather and use it to create your new bot. There you can also configure his name, set his avatar, etc. It is also important to know the Token of our bot, write it down.
 
-2 Пишеv уже нашему @боту, начинаем с ним чат, нажимаем /start
+2. Write to our @bot, start a chat with him, press /start
 
-3 Дальше, нам нужно узнать параметра нашего ID нашего чата, куда мы будем отправлять сообщения (например, это наш с ним личный чат, или какой-нибудь групповой, куда добавлен наш бот). Открываем браузер и открываем там ссылку: 
+3. Next, we need to know the parameter ID of our chat, where we will send messages (for example, it is our personal chat with him, or some group, where our bot is added). Open the browser and open the link there:
+`https://api.telegram.org/bot<token>/getUpdates`
 
-'''
-https://api.telegram.org/bot<token>/getUpdates
-'''
+Without closing the browser tab, write a message to the bot in the message box. After that, refresh the browser tab, and there we find the parameter we are looking for. Write it down.
 
-Не закрывая вкладку браузера, пишем боту сообщение в телеге. После, обновляем вкладку браузера, и там находим искомый нами параметр. Записываем его.
+In total, we have two necessary parameters:
+- Bot token
+- Chat ID
 
-Итого у нас получается два необходимых параметра:
+4. And now we test sending a message through the browser, substituting our parameters in the request:
+`https://api.telegram.org/bot<token>/sendMessage?chat_id=<chatId>&text=Hello%20World`
 
-token бота
-id чата
-
-4 А теперь проверяем отправку сообщения через браузер, подставляя наши параметры в запрос: 
-
-'https://api.telegram.org/bot<token>/sendMessage?chat_id=<chatId>&text=Hello%20World'
-
-Итак, сообщение получили. Переходим к отправке сообщений из консоли.
-
-5 Далее, небольшая демонстрация по отправке тех или иных сообщений или файлов по принципу (целевая команда > передача результата в постоянный временный файл):
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+So, we got the message. Let's move on to sending messages from the console.
+`bash telegramMessage.sh "Test text"`
 
 
 # Решение ошибки 403 при работе с репозиторием
