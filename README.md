@@ -30,7 +30,9 @@ P.s. Resolving the 403 error when working with the repository
 P.p.s
 
 `git add <file>` - not used if option `-a` used with command `git commit`
+
 `git commit -am 'Commit comment'` - very usefull command. With `-a` option no need use `git add` before
+
 `git push`
 
 
