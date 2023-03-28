@@ -28,11 +28,14 @@ P.s. Resolving the 403 error when working with the repository
 `echo url=https://kyurov@github.com | git credential reject`
 
 P.p.s
-```
-git add <file>
-git commit -am 'Commit comment'
-git push
 
+`git add <file>` - not used if option `-a` used with command `git commit`
+`git commit -am 'Commit comment'` - very usefull command. With `-a` option no need use `git add` before
+`git push`
+
+
+How to remove DS_Store
+```
 echo .DS_Store >> .gitignore
 git add .gitignore
 git commit -am '.DS_Store banished!'
