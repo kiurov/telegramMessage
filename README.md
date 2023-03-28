@@ -30,7 +30,10 @@ P.s. Resolving the 403 error when working with the repository
 P.p.s
 ```
 git add <file>
-git commit -a -m 'Commit comment'
+git commit -am 'Commit comment'
 git push
 
+echo .DS_Store >> .gitignore
+git add .gitignore
+git commit -am '.DS_Store banished!'
 ```
