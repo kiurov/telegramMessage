@@ -20,7 +20,10 @@ In total, we have two necessary parameters:
 
 So, we got the message. Let's move on to sending messages from the console.
 
-`bash telegramMessage.sh "Test text"`
+`bash telegramMessage.sh -m "Test text"`
+
+An example of using a bot to send a task status with crontabs:
+`25 * * * * bash ~/telegramMessage/telegramMessage.sh -m "$(ps -aef | gawk 'BEGIN{print "PID STIME TIME CMD"}$8~/^python3/{print $2,$5,$7,$8,$NF}' | column -t)"`
 
 
 P.s. Resolving the 403 error when working with the repository
