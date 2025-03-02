@@ -1,4 +1,4 @@
-#!/bin/bash
+#!env bash
 # Set the API token and chat ID
 apiToken="6184791569:AAEaA55F8T8LmLUktfmfXDDft9FI0dE7vq4" # This is token for your bot
 # How to get chat ID from telegram. Send the message to telegram bot, then open the link
